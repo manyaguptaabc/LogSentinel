@@ -1,0 +1,20 @@
+Jan 15 10:01:23 server sshd[1234]: Authentication failed for user root from 192.168.1.10
+Jan 15 10:02:10 server systemd[1]: Service nginx.service failed to start
+Jan 15 10:03:05 server kernel: INFO: System boot completed successfully
+Jan 15 10:04:22 server sshd[1235]: Invalid password attempt for user admin
+Jan 15 10:05:11 server systemd[1]: Unit apache2.service failed
+Jan 15 10:06:33 server app[999]: ERROR: Database connection timeout after 30 seconds
+Jan 15 10:07:45 server kernel: WARNING: CPU temperature above threshold 85C
+Jan 15 10:08:12 server sshd[1236]: Unauthorized access denied for user guest
+Jan 15 10:09:55 server app[1000]: ERROR: Failed to write to disk - no space left
+Jan 15 10:10:01 server systemd[1]: Service mysql.service started successfully
+Jan 15 10:11:30 server app[1001]: INFO: Backup process connected to remote server
+Jan 15 10:12:44 server kernel: ERROR: Critical memory allocation failure
+Jan 15 10:13:22 server sshd[1237]: Authentication failed for user deploy from 10.0.0.5
+Jan 15 10:14:10 server app[1002]: WARNING: Disk usage at 90 percent on /var/log
+Jan 15 10:15:05 server systemd[1]: Daemon crond failed to start
+Jan 15 10:16:33 server app[1003]: INFO: User session started successfully
+Jan 15 10:17:55 server kernel: WARNING: Network interface eth0 showing packet loss
+Jan 15 10:18:12 server app[1004]: ERROR: Failed to parse configuration file
+Jan 15 10:19:44 server sshd[1238]: Access denied - invalid password for root
+Jan 15 10:20:01 server systemd[1]: Unit firewalld.service entered failed state
