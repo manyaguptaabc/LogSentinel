@@ -1,69 +1,74 @@
-# LogSentinel — Linux Log Monitoring & Alerting System
+# LogSentinel
 
-A Python-based Linux log monitoring tool that parses, classifies, and alerts on system log entries to identify recurring operational issues.
+A Python-based Linux log monitoring and alerting system that analyzes system logs, classifies events, generates alerts, and stores log metadata for troubleshooting.
 
 ## Features
-- Parses Linux system log files (`/var/log/syslog`, custom logs)
-- Classifies entries into: ERROR, WARNING, AUTH_ISSUE, SERVICE_FAILURE, INFO
-- Generates categorized summary reports from 1,000+ log entries
-- Rule-based alert engine for service failures, auth issues, and critical errors
-- Stores log metadata in MySQL for historical analysis and troubleshooting
 
-## Tech Stack
-- Python 3.x
-- MySQL (optional — runs in offline mode without it)
-- Regex-based log parsing
-- Rule-based alert logic
+* Parse Linux system log files
+* Classify events into ERROR, WARNING, INFO, and AUTH_ISSUE categories
+* Generate rule-based alerts for recurring issues
+* Produce structured log summaries
+* Store log metadata in MySQL
+* Support offline execution when database connectivity is unavailable
 
-## Setup
+## Technologies Used
 
-### 1. Clone the repo
-```bash
-git clone https://github.com/yourusername/LogSentinel.git
-cd LogSentinel
+* Python
+* MySQL
+* Git & GitHub
+
+## Project Structure
+
+```text
+LogSentinel/
+│
+├── log_sentinel.py
+├── requirements.txt
+├── sample_system.log
+└── README.md
 ```
 
-### 2. Install dependencies
+## Installation
+
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. (Optional) Setup MySQL
-```sql
-CREATE DATABASE logsentinel_db;
-```
-Update `DB_CONFIG` in `log_sentinel.py` with your credentials.
+## Run
 
-### 4. Run
 ```bash
 python log_sentinel.py
 ```
 
 ## Sample Output
-```
-=======================================================
-       LogSentinel — System Log Analysis Report
-=======================================================
-  Total log entries parsed : 20
--------------------------------------------------------
-  ERROR                : 4 entries
-  AUTH_ISSUE           : 5 entries
-  SERVICE_FAILURE      : 4 entries
-  WARNING              : 3 entries
-  INFO                 : 3 entries
-=======================================================
 
-  [ALERT ENGINE]
-  ⚠️  ALERT: 'ERROR' occurred 4 times — investigate immediately!
-  ⚠️  ALERT: 'AUTH_ISSUE' occurred 5 times — investigate immediately!
-  ⚠️  ALERT: 'SERVICE_FAILURE' occurred 4 times — investigate immediately!
+```text
+Starting LogSentinel...
+
+Total log entries parsed : 20
+
+ERROR      : 10 entries
+INFO       : 4 entries
+AUTH_ISSUE : 3 entries
+WARNING    : 3 entries
+
+ALERT: 'ERROR' occurred 10 times
+ALERT: 'AUTH_ISSUE' occurred 3 times
 ```
 
-## Use Cases
-- Linux server health monitoring
-- Security audit log analysis
-- Automated incident detection
-- Historical fault trend analysis via MySQL
+## Learning Outcomes
 
-## Author
-Manya Gupta — github.com/manyaguptaabc
+* Linux log analysis
+* Python automation
+* Rule-based alerting
+* Database integration
+* Troubleshooting workflows
+* System monitoring fundamentals
+
+## Future Improvements
+
+* Email notifications
+* Dashboard for log visualization
+* Real-time log monitoring
+* Docker deployment
+* Advanced alert rules
